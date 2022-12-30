@@ -20,6 +20,7 @@ root.render(
           <Route element={<Layout />}>
             <Route index element={<App />} />
             <Route path='/generate/type/:type' element={<GeneratePage />} />
+            <Route path='*' element={<App />} />
           </Route>
         </Routes>
       </BrowserRouter>
