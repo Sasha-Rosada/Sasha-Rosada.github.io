@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.c007768c.css",
-    "main.js": "/static/js/main.9dfea854.js",
-    "static/media/certpart2022_UA.jpg": "/static/media/certpart2022_UA.8087fdbc0f09ea381765.jpg",
-    "static/media/certpart2022_EN.jpg": "/static/media/certpart2022_EN.8fbcacb157cfef5f209f.jpg",
-    "static/media/diploma2022_UA.jpg": "/static/media/diploma2022_UA.8bae38e866aca335a4c7.jpg",
-    "static/media/diploma2022_EN.jpg": "/static/media/diploma2022_EN.70c1fb3c5c5d04752f28.jpg",
-    "static/media/certmentor2022_EN.jpg": "/static/media/certmentor2022_EN.d7870e1f1300e20a5fd3.jpg",
-    "static/media/certmentor2022_UA.jpg": "/static/media/certmentor2022_UA.083c9adabf0a4a63a500.jpg",
-    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/index.html",
-    "main.c007768c.css.map": "/static/css/main.c007768c.css.map",
-    "main.9dfea854.js.map": "/static/js/main.9dfea854.js.map"
+    "main.css": "/Sasha-Rosada/static/css/main.680daf47.css",
+    "main.js": "/Sasha-Rosada/static/js/main.18c34da7.js",
+    "static/media/certpart2022_UA.jpg": "/Sasha-Rosada/static/media/certpart2022_UA.8087fdbc0f09ea381765.jpg",
+    "static/media/certpart2022_EN.jpg": "/Sasha-Rosada/static/media/certpart2022_EN.8fbcacb157cfef5f209f.jpg",
+    "static/media/diploma2022_UA.jpg": "/Sasha-Rosada/static/media/diploma2022_UA.8bae38e866aca335a4c7.jpg",
+    "static/media/diploma2022_EN.jpg": "/Sasha-Rosada/static/media/diploma2022_EN.70c1fb3c5c5d04752f28.jpg",
+    "static/media/certmentor2022_EN.jpg": "/Sasha-Rosada/static/media/certmentor2022_EN.d7870e1f1300e20a5fd3.jpg",
+    "static/media/certmentor2022_UA.jpg": "/Sasha-Rosada/static/media/certmentor2022_UA.083c9adabf0a4a63a500.jpg",
+    "static/media/slick.svg": "/Sasha-Rosada/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Sasha-Rosada/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Sasha-Rosada/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Sasha-Rosada/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Sasha-Rosada/index.html",
+    "main.680daf47.css.map": "/Sasha-Rosada/static/css/main.680daf47.css.map",
+    "main.18c34da7.js.map": "/Sasha-Rosada/static/js/main.18c34da7.js.map"
   },
   "entrypoints": [
-    "static/css/main.c007768c.css",
-    "static/js/main.9dfea854.js"
+    "static/css/main.680daf47.css",
+    "static/js/main.18c34da7.js"
   ]
 }
