@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/certify-gen/static/css/main.f6b426ed.css",
-    "main.js": "/certify-gen/static/js/main.8ed8d5aa.js",
-    "static/media/certpart2022_UA.jpg": "/certify-gen/static/media/certpart2022_UA.8087fdbc0f09ea381765.jpg",
-    "static/media/certpart2022_EN.jpg": "/certify-gen/static/media/certpart2022_EN.8fbcacb157cfef5f209f.jpg",
-    "static/media/diploma2022_UA.jpg": "/certify-gen/static/media/diploma2022_UA.8bae38e866aca335a4c7.jpg",
-    "static/media/diploma2022_EN.jpg": "/certify-gen/static/media/diploma2022_EN.70c1fb3c5c5d04752f28.jpg",
-    "static/media/certmentor2022_EN.jpg": "/certify-gen/static/media/certmentor2022_EN.d7870e1f1300e20a5fd3.jpg",
-    "static/media/certmentor2022_UA.jpg": "/certify-gen/static/media/certmentor2022_UA.083c9adabf0a4a63a500.jpg",
-    "static/media/slick.svg": "/certify-gen/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/certify-gen/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/certify-gen/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/certify-gen/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/certify-gen/index.html",
-    "main.f6b426ed.css.map": "/certify-gen/static/css/main.f6b426ed.css.map",
-    "main.8ed8d5aa.js.map": "/certify-gen/static/js/main.8ed8d5aa.js.map"
+    "main.css": "/static/css/main.c007768c.css",
+    "main.js": "/static/js/main.9dfea854.js",
+    "static/media/certpart2022_UA.jpg": "/static/media/certpart2022_UA.8087fdbc0f09ea381765.jpg",
+    "static/media/certpart2022_EN.jpg": "/static/media/certpart2022_EN.8fbcacb157cfef5f209f.jpg",
+    "static/media/diploma2022_UA.jpg": "/static/media/diploma2022_UA.8bae38e866aca335a4c7.jpg",
+    "static/media/diploma2022_EN.jpg": "/static/media/diploma2022_EN.70c1fb3c5c5d04752f28.jpg",
+    "static/media/certmentor2022_EN.jpg": "/static/media/certmentor2022_EN.d7870e1f1300e20a5fd3.jpg",
+    "static/media/certmentor2022_UA.jpg": "/static/media/certmentor2022_UA.083c9adabf0a4a63a500.jpg",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.c007768c.css.map": "/static/css/main.c007768c.css.map",
+    "main.9dfea854.js.map": "/static/js/main.9dfea854.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6b426ed.css",
-    "static/js/main.8ed8d5aa.js"
+    "static/css/main.c007768c.css",
+    "static/js/main.9dfea854.js"
   ]
 }
