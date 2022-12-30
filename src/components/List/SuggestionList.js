@@ -9,8 +9,8 @@ export function Suggestlist({ list, onSuggest }) {
                         <ListItem key={object.nameUA + (object?.nominationUA || '')} p='3' onClick={() => onSuggest(object)}>
 
                             <Flex justifyContent='space-between'>
-                                <span>{object.nameUA}</span>
-                                {object?.nominationUA ?? <span style={{ color: 'rgba(108,117,125, 1)' }}>{object.nominationUA}</span>}
+                                <div>{object.nameUA}</div>
+                                {object?.nominationUA ?? <div style={{ color: 'rgba(108,117,125, 1)' }}>{object.nominationUA}</div>}
                             </Flex>
                         </ListItem>)
                     )

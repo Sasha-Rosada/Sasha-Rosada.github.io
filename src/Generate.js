@@ -105,7 +105,7 @@ function GeneratePage() {
 
   return (
     <>
-      <Flex direction='column' mx={[0, 10, 10, 10, '20rem']} pb="1.2rem" >
+      <Flex direction='column' pb="1.2rem" className="input-n" >
         <Stack rounded={5} p={2} mt={4} display='flex' justifyContent='center' flexDirection='row' alignItems='end' gap={1}>
           <Button bg='white' variant='outline' leftIcon={<ArrowBackIcon />} px={6} onClick={() => navigate('/')}>Повернутися</Button>
           <FormControl p={0}>
