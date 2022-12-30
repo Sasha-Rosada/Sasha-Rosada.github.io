@@ -9,10 +9,10 @@ export async function GenerateCertificate({ settings: { mapping }, dataset, img:
                 ctx.drawImage(img, 0, 0, img.width, img.height)
 
                 for (const alias in mapping[lang]) {
-                    console.log({ alias, dataset })
 
-                    const { pos: rawPos, fontsize, color, centerX } = mapping[lang][alias]
-                    const text = dataset[alias];
+                    const { pos: rawPos, fontsize, centerX } = mapping[lang][alias]
+                    const text = String(dataset[alias]);
+
 
                     ctx.textBaseline = 'top'
 
@@ -20,6 +20,16 @@ export async function GenerateCertificate({ settings: { mapping }, dataset, img:
                     ctx.font = `${fontsize}px 'Times New Roman'`
 
                     let pos = centerX ? CenterPos(ctx, text, rawPos) : rawPos;
+
+                    if (alias.startsWith('nomination')) {
+                        const w = 1542;
+
+                        let width = ctx.measureText(text).width;
+
+                        
+                        ctx.fillText(text, pos[0] + ((w - width) / 2), pos[1])
+                        continue;
+                    }
 
                     if (text.includes(',')) {
                         const offy = 75, absy = 18;
@@ -42,12 +52,11 @@ export async function GenerateCertificate({ settings: { mapping }, dataset, img:
                 }
                 images.push({
                     name: `${type}-${lang}`,
-                    image: ctx.canvas.toDataURL("image/png", 1)
+                    image: ctx.canvas.toDataURL("image/jpeg", 1)
                 })
 
                 ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
             }
-
 
             resolve(images)
         } catch (e) {

@@ -1,5 +1,5 @@
-import { ArrowLeftIcon, SettingsIcon, ArrowRightIcon, ArrowBackIcon, DownloadIcon } from "@chakra-ui/icons"
-import { FormControl, FormLabel, Input, IconButton, Stack, Image as ChakraImage, Button, Flex } from '@chakra-ui/react'
+import { ArrowLeftIcon, SettingsIcon, ArrowRightIcon, ArrowBackIcon, DownloadIcon, ArrowUpIcon } from "@chakra-ui/icons"
+import { FormControl, FormLabel, Input, IconButton, Stack, Image as ChakraImage, Button, Flex, Box } from '@chakra-ui/react'
 import { Suggestlist } from 'components/List/SuggestionList'
 import { useState, useMemo, memo, Fragment, useEffect, useCallback } from 'react'
 import { useParams, useNavigate } from 'react-router'
@@ -24,7 +24,6 @@ function GeneratePage() {
     isDatasetLoaded: false
   })
   const [isGenerationStart, setIsGenerationStart] = useState(false)
-  // const [isGenerationInProggres, setGenerationProgress] = useState(true)
   const [suggestion, setSuggestion] = useState([])
   const [images, setImages] = useState([])
   const [input, setInput] = useState('')
@@ -33,8 +32,10 @@ function GeneratePage() {
     const en = new Image();
     const ua = new Image();
 
-    en.src = API.offline.FetchIMG(type)[0];
-    ua.src = API.offline.FetchIMG(type)[1];
+    const links = API.offline.FetchIMG(type)
+
+    en.src = links[0]
+    ua.src = links[1]
 
     en.addEventListener('load', () => {
       setIsLoaded(p => ({ ...p, isImageLoad: { ...p.isImageLoad, en: true } }));
@@ -60,7 +61,7 @@ function GeneratePage() {
     setSuggestion([]);
 
     if (event.target.value) {
-      setSuggestion(preloaded.dataset.filter(({ nameUA }) => nameUA.toLowerCase().startsWith(event.target.value.toLowerCase())));
+      setSuggestion(preloaded.dataset.filter(({ nameUA }) => nameUA.toLowerCase().includes(event.target.value.toLowerCase())));
     }
 
     setInput(event.target.value);
@@ -68,7 +69,7 @@ function GeneratePage() {
 
   const onSuggest = useCallback((value) => {
     setSuggestion([]);
-    setInput(value);
+    setInput(value.nameUA);
   }, [])
 
   const onGenerateHandler = useCallback(() => {
@@ -82,18 +83,20 @@ function GeneratePage() {
     })
       .then((res) => {
         setImages(res);
-        setIsGenerationStart(false)
       })
       .catch((reason) => {
         setImages([]);
         console.trace(reason.stack)
+      })
+      .finally(() => {
+        setIsGenerationStart(false)
       })
   }, [type, preloaded.images.ua, preloaded.images.en, input, preloaded.dataset])
 
   const onGenerateClick = useCallback(() => {
     setIsGenerationStart(true);
     setImages([]);
-    onGenerateHandler()
+    setTimeout(onGenerateHandler, 1000)
   }, [onGenerateHandler])
 
   if (!isLoaded.isDatasetLoaded || !isLoaded.isImageLoad.ua || !isLoaded.isImageLoad.en) {
@@ -102,7 +105,7 @@ function GeneratePage() {
 
   return (
     <>
-      <Flex direction='column' mx={{ md: '13rem', }} pb="1.2rem">
+      <Flex direction='column' mx={[0, 10, 10, 10, '20rem']} pb="1.2rem" >
         <Stack rounded={5} p={2} mt={4} display='flex' justifyContent='center' flexDirection='row' alignItems='end' gap={1}>
           <Button bg='white' variant='outline' leftIcon={<ArrowBackIcon />} px={6} onClick={() => navigate('/')}>Повернутися</Button>
           <FormControl p={0}>
@@ -113,16 +116,42 @@ function GeneratePage() {
           <Button leftIcon={<SettingsIcon />} bg='white' variant='outline' icon={<SettingsIcon />} px={6} onClick={onGenerateClick}>Отримати</Button>
         </Stack>
       </Flex>
+      {(images.length === 0) && <Remider loader={isGenerationStart} />}
       {
         images.length > 0 && <Carusel type={type} images={[images[0].image, images[1].image, images[0].image, images[1].image]} />
       }
-      {
-        isGenerationStart && <Flex color="red.500"> ANIME </Flex>
-      }
-      
     </>
   )
 }
+
+function Remider({ loader }) {
+
+  if (loader) {
+    return (
+      <Box>
+        <Loading />
+      </Box>
+    )
+  }
+
+  return (
+    <Flex flexDirection='column' justifyContent='center' alignItems='center' className="reminder">
+      <Box bg="white" rounded={5} p={6} shadow='2xl' display="flex" flexDirection='column' justifyContent='center' alignItems='center'>
+        {
+          !loader && (
+            <>
+              <ArrowUpIcon />
+              <Box>
+                Заповніть поле
+              </Box>
+            </>
+          )
+        }
+      </Box>
+    </Flex>
+  )
+}
+
 
 function Carusel({ images, type }) {
   const [imageIndex, setImageIndex] = useState(0)
@@ -140,7 +169,7 @@ function Carusel({ images, type }) {
   }), []);
 
   return (
-    <Flex>
+    <Flex className="car-usel">
       <Slider {...settings} className={"w-100 h-100 " + (type === 'diploma' ? 'bigg' : 'def')} >
         {
           images.map((img, idx) => <MemoImage key={idx} type={type} index={idx} imageIndex={imageIndex} lang={idx % 2 === 0 ? "en" : 'ua'} img={img} />)
@@ -155,7 +184,7 @@ const MemoImage = memo(({ index, img, imageIndex, lang, type }) => {
   return (
     <div className={cls}>
       <ImageOverlay isShown={index === imageIndex} img={img} lang={lang} />
-      <ChakraImage src={img} alt={img} boxShadow="large" />
+      <ChakraImage decoding="async" src={img} alt={img} boxShadow="large" />
     </div>
   )
 })

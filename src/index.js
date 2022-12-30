@@ -15,6 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ChakraProvider>
+
       <HashRouter>
         <Routes>
           <Route element={<Layout />}>
@@ -24,6 +25,7 @@ root.render(
           </Route>
         </Routes>
       </HashRouter>
+
     </ChakraProvider>
   </React.StrictMode>
 );

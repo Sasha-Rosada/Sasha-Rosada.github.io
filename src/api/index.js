@@ -71,7 +71,7 @@ export const configuration = {
                 "nameUA": {
                     "pos": [0, 1830],
                     "color": [0, 0, 0],
-                    "fontsize": 130,
+                    "fontsize": 150,
                     "centerX": true
                 }
             },
@@ -79,7 +79,7 @@ export const configuration = {
                 "nameEN": {
                     "pos": [0, 1830],
                     "color": [0, 0, 0],
-                    "fontsize": 130,
+                    "fontsize": 150,
                     "centerX": true
                 }
             }
@@ -89,7 +89,7 @@ export const configuration = {
         "mapping": {
             "ua": {
                 "nameUA": {
-                    "pos": [0, 1060],
+                    "pos": [0, 1080],
                     "color": [0, 0, 0],
                     "fontsize": 150,
                     "centerX": true
@@ -97,7 +97,7 @@ export const configuration = {
             },
             "en": {
                 "nameEN": {
-                    "pos": [0, 1060],
+                    "pos": [0, 1080],
                     "color": [0, 0, 0],
                     "fontsize": 150,
                     "centerX": true
@@ -115,13 +115,13 @@ export const configuration = {
                     "centerX": true
                 },
                 "nominationUA": {
-                    "pos": [700, 2345],
+                    "pos": [751.76, 2352],
                     "color": [0, 0, 0],
                     "fontsize": 90,
                     "centerX": false
                 },
                 "placeUA": {
-                    "pos": [1363, 1860],
+                    "pos": [1363, 1870],
                     "color": [0, 0, 0],
                     "fontsize": 100,
                     "centerX": false
@@ -135,13 +135,13 @@ export const configuration = {
                     "centerX": true
                 },
                 "nominationEN": {
-                    "pos": [780, 2345],
+                    "pos": [751.76, 2352],
                     "color": [0, 0, 0],
                     "fontsize": 90,
                     "centerX": false
                 },
                 "placeEN": {
-                    "pos": [1050, 1860],
+                    "pos": [1050, 1870],
                     "color": [0, 0, 0],
                     "fontsize": 100,
                     "centerX": false
