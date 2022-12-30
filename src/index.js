@@ -5,7 +5,7 @@ import App from './App';
 import GeneratePage from "./Generate";
 
 import { ChakraProvider } from '@chakra-ui/react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { Layout } from './components/Generic/Layout';
 
 import "./css/App.css"
@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ChakraProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<App />} />
@@ -23,7 +23,7 @@ root.render(
             <Route path='*' element={<App />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ChakraProvider>
   </React.StrictMode>
 );
