@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router";
 import { Header } from "./Header";
-import Snowfall from "./Snowfall";
+import Snowfall from "./Effect/Snowfall";
 import { motion } from "framer-motion";
 
 const pageVariants = {

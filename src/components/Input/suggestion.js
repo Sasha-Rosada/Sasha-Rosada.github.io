@@ -1,6 +1,7 @@
 import { List, ListItem, Box, Flex } from "@chakra-ui/react"
+import { Loading } from "components/Loading"
 
-export function Suggestlist({ list, onSuggest }) {
+export function SuggestionList({ list, onSuggest }) {
     return list.length > 0 && (
         <Box boxShadow='lg' rounded='md' bg='white' position="absolute" maxHeight={300} zIndex={999} width="100%" overflowY="scroll">
             <List spacing={3} className="suggest-list">
@@ -14,6 +15,25 @@ export function Suggestlist({ list, onSuggest }) {
                             </Flex>
                         </ListItem>)
                     )
+                }
+            </List>
+        </Box>
+    )
+}
+
+export function SuggestionListPure({ list, onSuggest, loading }) {
+    return (
+        <Box boxShadow='lg' rounded='md' bg='white' position="absolute" maxHeight={300} zIndex={999} width="100%" overflowY="scroll">
+            <List spacing={3} className="suggest-list">
+                {
+                    !loading && list.map((object) => (
+                        <ListItem key={object} p='3' onClick={() => onSuggest(object)} color="black">
+                            {object}
+                        </ListItem>)
+                    )
+                }
+                {
+                    loading && <Loading />
                 }
             </List>
         </Box>

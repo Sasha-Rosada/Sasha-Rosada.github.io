@@ -1,6 +1,6 @@
 import { ArrowLeftIcon, SettingsIcon, ArrowRightIcon, ArrowBackIcon, DownloadIcon, ArrowUpIcon } from "@chakra-ui/icons"
 import { FormControl, FormLabel, Input, IconButton, Stack, Image as ChakraImage, Button, Flex, Box } from '@chakra-ui/react'
-import { Suggestlist } from 'components/List/SuggestionList'
+import { SuggestionList } from 'components/Input/suggestion'
 import { useState, useMemo, memo, Fragment, useEffect, useCallback } from 'react'
 import { useParams, useNavigate } from 'react-router'
 import Slider from "react-slick"
@@ -111,7 +111,7 @@ function GeneratePage() {
           <FormControl p={0}>
             <FormLabel color="white">Введіть ім'я</FormLabel>
             <Input autoComplete="off" bg='white' type='text' value={input} onChange={onChange} />
-            <Suggestlist list={suggestion} onSuggest={onSuggest} />
+            <SuggestionList list={suggestion} onSuggest={onSuggest} />
           </FormControl>
           <Button leftIcon={<SettingsIcon />} bg='white' variant='outline' icon={<SettingsIcon />} px={6} onClick={onGenerateClick}>Отримати</Button>
         </Stack>
