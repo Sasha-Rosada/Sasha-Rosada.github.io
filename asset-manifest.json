@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.be921ca1.css",
-    "main.js": "/static/js/main.1323d29c.js",
+    "main.css": "/static/css/main.4ccfd331.css",
+    "main.js": "/static/js/main.9d59c26b.js",
     "static/media/diploma2022_UA.jpg": "/static/media/diploma2022_UA.fd3142485f6e5f619201.jpg",
     "static/media/diploma2022_EN.jpg": "/static/media/diploma2022_EN.72c233f46a3e9029ad3c.jpg",
     "static/media/certpart2022_UA.jpg": "/static/media/certpart2022_UA.8087fdbc0f09ea381765.jpg",
@@ -13,11 +13,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.be921ca1.css.map": "/static/css/main.be921ca1.css.map",
-    "main.1323d29c.js.map": "/static/js/main.1323d29c.js.map"
+    "main.4ccfd331.css.map": "/static/css/main.4ccfd331.css.map",
+    "main.9d59c26b.js.map": "/static/js/main.9d59c26b.js.map"
   },
   "entrypoints": [
-    "static/css/main.be921ca1.css",
-    "static/js/main.1323d29c.js"
+    "static/css/main.4ccfd331.css",
+    "static/js/main.9d59c26b.js"
   ]
 }
