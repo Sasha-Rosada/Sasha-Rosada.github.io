@@ -1,7 +1,6 @@
 export async function GenerateCertificate({ settings: { mapping }, dataset, img: imgset, type } = {}) {
     return new Promise((resolve, reject) => {
         try {
-            console.log({ mapping, dataset, imgset, type })
             const { context: ctx } = Context(imgset[0].width, imgset[0].height);
             const images = [];
 
