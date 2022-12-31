@@ -1,6 +1,7 @@
-import { Image as ImageCH } from '@chakra-ui/react'
+import { Flex, Image as ImageCH } from '@chakra-ui/react'
 import { API } from 'api';
 import { useNavigate } from 'react-router-dom';
+import { Text } from '@chakra-ui/react'
 
 
 function App() {
@@ -25,7 +26,10 @@ function App() {
   ]
 
   return (
-    <>
+    <Flex flexDirection='column' alignItems='center'>
+      <Text color='white' fontSize="5rem" fontWeight={800}  filter='blur(1px)'>
+        Credico 2022
+      </Text>
       <div className='card-holder'>
         {
           url.map(([url, click, txt], idx) => {
@@ -41,7 +45,7 @@ function App() {
           })
         }
       </div>
-    </>
+    </Flex>
   );
 }
 

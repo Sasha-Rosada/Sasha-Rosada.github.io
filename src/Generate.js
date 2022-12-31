@@ -29,8 +29,8 @@ function GeneratePage() {
   const [input, setInput] = useState('')
 
   useEffect(() => {
-    confirm.log({ isLoaded })
-  }, [isLoaded.isImageLoad.en, isLoaded.isDatasetLoaded, isLoaded.isImageLoad.ua])
+    console.info({ isLoaded })
+  }, [isLoaded.isImageLoad.en, isLoaded.isDatasetLoaded, isLoaded.isImageLoad.ua, isLoaded])
 
   useEffect(() => {
     const en = new Image();
