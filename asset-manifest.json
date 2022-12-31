@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.be921ca1.css",
-    "main.js": "/static/js/main.4040944b.js",
+    "main.js": "/static/js/main.1323d29c.js",
+    "static/media/diploma2022_UA.jpg": "/static/media/diploma2022_UA.fd3142485f6e5f619201.jpg",
+    "static/media/diploma2022_EN.jpg": "/static/media/diploma2022_EN.72c233f46a3e9029ad3c.jpg",
     "static/media/certpart2022_UA.jpg": "/static/media/certpart2022_UA.8087fdbc0f09ea381765.jpg",
     "static/media/certpart2022_EN.jpg": "/static/media/certpart2022_EN.8fbcacb157cfef5f209f.jpg",
-    "static/media/diploma2022_UA.jpg": "/static/media/diploma2022_UA.8bae38e866aca335a4c7.jpg",
-    "static/media/diploma2022_EN.jpg": "/static/media/diploma2022_EN.70c1fb3c5c5d04752f28.jpg",
-    "static/media/certmentor2022_EN.jpg": "/static/media/certmentor2022_EN.d7870e1f1300e20a5fd3.jpg",
-    "static/media/certmentor2022_UA.jpg": "/static/media/certmentor2022_UA.083c9adabf0a4a63a500.jpg",
+    "static/media/certmentor2022_EN.jpg": "/static/media/certmentor2022_EN.ef58de0c896927f76d30.jpg",
+    "static/media/certmentor2022_UA.jpg": "/static/media/certmentor2022_UA.cfbadf6fdc25d9c1187a.jpg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.be921ca1.css.map": "/static/css/main.be921ca1.css.map",
-    "main.4040944b.js.map": "/static/js/main.4040944b.js.map"
+    "main.1323d29c.js.map": "/static/js/main.1323d29c.js.map"
   },
   "entrypoints": [
     "static/css/main.be921ca1.css",
-    "static/js/main.4040944b.js"
+    "static/js/main.1323d29c.js"
   ]
 }
